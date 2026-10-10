@@ -1,0 +1,725 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   AUTH PAGES
+========================= */
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background:
+        radial-gradient(circle at top left, #dbeafe, transparent 35%),
+        radial-gradient(circle at bottom right, #e0e7ff, transparent 35%),
+        #f5f7fb;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+    background: #ffffff;
+    padding: 42px;
+    border-radius: 22px;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+}
+
+.auth-logo {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.auth-logo h1 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.auth-logo p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #dbe1ea;
+    border-radius: 10px;
+    outline: none;
+    background: #ffffff;
+    color: #1f2937;
+    transition: 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.primary-btn {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.auth-footer {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.auth-footer a {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+
+/* =========================
+   APPLICATION LAYOUT
+========================= */
+
+.app-layout {
+    min-height: 100vh;
+    display: flex;
+    background: #f5f7fb;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: #111827;
+    color: white;
+    padding: 25px 16px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px 28px;
+}
+
+.sidebar-logo > span {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2563eb;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.sidebar-logo h2 {
+    font-size: 19px;
+    margin-bottom: 3px;
+}
+
+.sidebar-logo p {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.nav-link {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #cbd5e1;
+    padding: 13px 14px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.nav-link:hover {
+    background: #1e293b;
+    color: white;
+}
+
+.nav-link.active {
+    background: #2563eb;
+    color: white;
+}
+
+.logout-sidebar {
+    margin-top: auto;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 35px 40px;
+    max-width: 1600px;
+}
+
+
+/* =========================
+   TOPBAR / WELCOME
+========================= */
+
+.topbar {
+    margin-bottom: 30px;
+}
+
+.welcome-label {
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 9px;
+}
+
+.topbar h1 {
+    font-size: 32px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.topbar > div > p:last-child {
+    color: #64748b;
+    font-size: 15px;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 22px;
+    transition: 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #2563eb;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.stat-card p {
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.stat-card h2 {
+    color: #111827;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.stat-card span {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+
+/* =========================
+   CONTENT CARDS
+========================= */
+
+.content-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.content-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.content-card-header h2 {
+    color: #111827;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.content-card-header p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+/* =========================
+   APPLICATION LIST
+========================= */
+
+.application-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.application-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 17px 5px;
+    border-bottom: 1px solid #eef0f4;
+    transition: 0.2s ease;
+}
+
+.application-item:last-child {
+    border-bottom: none;
+}
+
+.application-item:hover {
+    background: #f8fafc;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.application-info {
+    flex: 1;
+}
+
+.application-info h3 {
+    font-size: 15px;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.application-info p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-applied {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status-interview {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.status-selected {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-rejected {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.status-scheduled {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+
+/* =========================
+   QUICK ACTION / BUTTONS
+========================= */
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+    border: 1px solid #dbe1ea;
+    background: white;
+    color: #334155;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.secondary-btn:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.danger-btn {
+    border: none;
+    background: #dc2626;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.danger-btn:hover {
+    background: #b91c1c;
+}
+
+.edit-btn {
+    border: none;
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.application-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.application-actions .edit-btn,
+.application-actions .danger-btn {
+    white-space: nowrap;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.empty-state h3 {
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   FORMS
+========================= */
+
+.page-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.page-form input,
+.page-form select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #dbe1ea;
+    border-radius: 9px;
+    outline: none;
+}
+
+.page-form input:focus,
+.page-form select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   MOBILE HEADER
+========================= */
+
+.mobile-header {
+    display: none;
+}
+
+
+/* =========================
+   DASHBOARD CTA
+========================= */
+
+.dashboard-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.dashboard-cta h2 {
+    margin-bottom: 7px;
+}
+
+.dashboard-cta p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+        padding: 30px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        background: white;
+        padding: 12px 15px;
+        border-radius: 14px;
+        border: 1px solid #e5e7eb;
+    }
+
+    .mobile-header .sidebar-logo {
+        padding: 0;
+    }
+
+    .mobile-header .sidebar-logo > span {
+        width: 36px;
+        height: 36px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .topbar h1 {
+        font-size: 27px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .application-actions {
+        width: 100%;
+    }
+
+    .application-actions button {
+        flex: 1;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .main-content {
+        padding: 14px;
+    }
+
+    .auth-container {
+        padding: 15px;
+    }
+
+    .auth-card {
+        padding: 28px 20px;
+        border-radius: 18px;
+    }
+
+    .auth-logo h1 {
+        font-size: 29px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+
+    .content-card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .topbar h1 {
+        font-size: 23px;
+    }
+
+    .application-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+
+    .application-actions {
+        width: 100%;
+    }
+
+    .application-actions button {
+        flex: 1;
+    }
+
+}
