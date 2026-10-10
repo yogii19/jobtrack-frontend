@@ -1,16 +1,37 @@
-# React + Vite
+# JobTrack – Job Application Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+JobTrack is a full-stack web application that helps users manage job applications and schedule interviews in one place.
 
-Currently, two official plugins are available:
+## Features
+- User registration and login with JWT authentication.
+- Add, edit, and delete job applications.
+- Track application status and company details.
+- Schedule and update interview details.
+- Dashboard to view applications and interviews.
+- Secure password hashing using BCrypt.
+- User-specific data access and protection.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+- Frontend: React.js, Vite, HTML, CSS, JavaScript.
+- Backend: Java, Spring Boot, Spring Security, REST APIs.
+- Database: MySQL.
+- Authentication: JWT.
+- Tools: Git, GitHub, Postman, Maven.
+- Deployment: Render.
 
-## React Compiler
+## Live Demo
+https://jobtrack-frontend-0skz.onrender.com
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Repositories
+- Frontend: https://github.com/yogii19/jobtrack-frontend
+- Backend: https://github.com/yogii19/jobtrack-backend
 
-## Expanding the Oxlint configuration
+## Run Locally
+1. Clone the frontend and backend repositories.
+2. Configure your MySQL database and backend environment.
+3. Start the Spring Boot application.
+4. Install frontend dependencies using `npm install`.
+5. Start the frontend using `npm run dev`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Author
+Yogesh Reddy
